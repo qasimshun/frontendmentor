@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 column layout</title>
+    <style>
+        button {
+            padding: .8em 2em;
+            border-radius: 20px;
+            border: none;
+            font-size: 1rem;
+            text-transform: capitalize;
+            font-weight: 900;
+            margin: 1rem 0;
+        }
+
+        img {
+            margin: 1rem 0;
+        }
+
+        .column1 button {
+            color: orange;
+        }
+
+        .column2 button {
+            color: #1E919A;
+        }
+
+        .column3 button {
+           color:#18747B;
+        }
+
+        .column1 {
+            background: orange;
+        }
+
+        .col {
+            padding: 3em;
+        }
+
+        .col h1 {
+            color: white;
+        }
+
+        .col p {
+            color: rgba(255, 255, 255, 0.815);
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .column2 {
+            background: #1E919A;
+        }
+
+        .column3 {
+            background: #18747B;
+        }
+
+        @media(min-width:760px){
+            .big-box {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .col h1 {
+                font-size: 2.2rem;
+            }
+            .col p {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media(min-width:1000px){
+            .big-box {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .col h1 {
+                font-size: 2.5rem;
+            }
+            .col p {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="big-box">
+        <div class="column1 col">
+            <img src="icon-sedans.svg" alt="sedan icon">
+            <h1>sedans</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea facere cupiditate mollitia odit officia adipisci illo, repellendus aut placeat sint qui et inventore ducimus, expedita tenetur labore consequuntur ut. Error sapiente obcaecati eius dolores suscipit quod, consequuntur eos, amet magnam, et ut. Commodi repellat, quas quia libero distinctio facere officiis?</p>
+            <button>learn more</button>
+        </div>
+        <div class="column2 col">
+            <img src="icon-suvs.svg" alt="sedan icon">
+            <h1>Suvs</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea facere cupiditate mollitia odit officia adipisci illo, repellendus aut placeat sint qui et inventore ducimus, expedita tenetur labore consequuntur ut. Error sapiente obcaecati eius dolores suscipit quod, consequuntur eos, amet magnam, et ut. Commodi repellat, quas quia libero distinctio facere officiis?</p>
+            <button>learn more</button>
+        </div>
+        <div class="column3 col">
+            <img src="icon-luxury.svg" alt="sedan icon">
+            <h1>Luxury</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea facere cupiditate mollitia odit officia adipisci illo, repellendus aut placeat sint qui et inventore ducimus, expedita tenetur labore consequuntur ut. Error sapiente obcaecati eius dolores suscipit quod, consequuntur eos, amet magnam, et ut. Commodi repellat, quas quia libero distinctio facere officiis?</p>
+            <button>learn more</button>
+        </div>
+    </div>
+</body>
+</html>
