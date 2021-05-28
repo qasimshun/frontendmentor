@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frontend mentor challenge</title>
+    <style>
+
+        h1 span {
+            color: darkorchid;
+            font-size: 2.5rem;
+        }
+        .right-box {
+            position: relative;
+        }
+        .right-box::after {
+            content: '';
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            background: rgba(255, 0, 0, 0.205);
+            position: absolute;
+        }
+
+        .left-box > p {
+            color: rgb(243, 222, 222);
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: white;
+        }
+        img {
+            height: 100%;
+            width: 120%;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bottom h2 {
+            margin-bottom: 0;
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .bottom p {
+            margin: 0;
+            color: rgb(212, 205, 205);
+        }
+
+        .left-box {
+            padding: 2em;
+            flex-direction: column;
+            align-items: flex-start!important;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        @media(max-width: 760px){
+            .big-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background: red;
+                overflow: hidden;
+            }
+
+            .left-box {
+                margin: 0 auto;
+                align-items: center!important;
+            }
+
+            .bottom {
+                flex-direction: column;
+            }
+        }
+
+
+        @media(min-width:760px){
+            body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        .big-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: red;
+            overflow: hidden;
+        }
+
+        
+        .bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .left-box {
+            padding: 1em;
+        }
+        }
+
+
+        @media(min-width:1100px){
+            body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        .big-box {
+            min-width: 75%;
+            width: 85vw;
+            max-width: 90%;
+            margin: 0 auto;
+            max-height: 450px;
+            background: red;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        
+
+        .bottom {
+            justify-content: space-between;
+            gap: 60px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="big-box">
+        <div class="left-box flex">
+            <h1>get <span>Insights</span> that helps <br>your business grow.</h1>
+            <p>discover the benefits that helps your business grow Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus porro delectus veniam minima placeat? Nulla ad voluptates quo consectetur quidem.</p>
+            <div class="bottom flex">
+                <div class="companies">
+                    <h2>10k+</h2>
+                    <p>companies</p>
+                </div>
+                <div class="tempelates">
+                    <h2>314</h2>
+                    <p>tempelates</p>
+                </div>
+                <div class="queries">
+                    <h2>12M+</h2>
+                    <p>queries</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-box">
+            <img src="image-header-desktop.jpg" alt="employees working in company">
+        </div>
+    </div>
+</body>
+</html>
