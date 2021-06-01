@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile card</title>
+    <style>
+
+        body {
+            display: grid;
+            place-items: center;
+            height: 700px;
+            overflow: hidden;
+            background: #095755;
+        }
+
+        .upper-side {
+            background: url(/images/bg-pattern-card.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 150px;
+        }
+        .box {
+            width: 400px;
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px;
+            background: white;
+        }
+
+        img {
+            max-width: 100%;
+            object-fit: cover;
+            display: block;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: 5px solid white;
+            position: relative;
+            top: 95px;
+        }
+
+        .lower {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border-top: 1px solid rgba(128, 128, 128, 0.527);
+        }
+
+        .upper {
+            margin-top: 5rem;
+        }
+
+        .img-top {
+            position: absolute;
+            left: -350px;
+            bottom: 350px;
+            z-index: -1;
+        }
+
+        div.img-bottom {
+            position: absolute;
+            z-index: -1;
+            right: -350px;
+            top: 350px;
+        }
+
+        .img-top > img, .img-bottom > img {
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="img-top">
+        <img src="/images/bg-pattern-top.svg" alt="">
+    </div>
+        <div class="box">
+            <div class="upper-side">
+                <img src="/images/image-victor.jpg" alt="">
+            </div>
+            <div class="bottom-side">
+                <div class="upper">
+                    <h1>victor crest <span>26</span></h1>
+                    <p>London</p>
+                </div>
+                <div class="lower">
+                    <div class="inner1">
+                        <h3>80k</h3>
+                        <p>Followers</p>
+                    </div>
+                    <div class="inner2">
+                        <h3>803k</h3>
+                        <p>Likes</p>
+                    </div>
+                    <div class="inner3">
+                        <h3>1.4k</h3>
+                        <p>Photos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-bottom">
+            <img src="/images/bg-pattern-bottom.svg" alt="">
+        </div>
+</body>
+</html>
