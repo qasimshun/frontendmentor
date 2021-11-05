@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: url(./images/mobile/image-header.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 1em;
+}
+
+img {
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+nav {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navigation-bar, 
+div.triangle {
+    transition: 350ms all ease;
+    transform: translateY(-1000px);
+    z-index: 10;
+}
+
+ul.header {
+    list-style-type: none;
+    margin: 3.2rem auto;
+    background: rgb(255, 255, 255);
+    padding: 1em 0;
+    position: relative;
+}
+
+div.tranform {
+    transform: translateY(0px);
+}
+
+div.transforming {
+    transform: translateY(0px) rotate(-90deg);
+}
+
+.header li {
+    border-radius: 1em;
+}
+
+nav {
+    position: relative;
+}
+
+.header li a {
+    color: grey;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: .7em 1.2em;
+}
+
+.header li:hover {
+    background: yellow;
+}
+
+.header li a:hover,
+.header li a:focus {
+    color: black;
+}
+
+.hamburger {
+    position: absolute;
+    right: 0px;
+    top: -55px;
+}
+
+.logo {
+    position: relative;
+    top: 20px;
+}
+
+.triangle {
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid white;
+    width: 0px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+.hero {
+    text-align: center;
+    color: white;
+    position: relative;
+    top: -100px;
+}
+
+.hero > h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.egg, .glass {
+    text-align: center;
+}
+
+.egg-content, .glass-content {
+    padding: 4em 2em;
+}
+
+.egg-content > h2,
+.glass-content > h2 {
+    font-size: 2.5rem;
+    margin-bottom: .5em;
+}
+
+.egg-content > p,
+.glass-content > p {
+    margin-bottom: 1em;
+}
+
+.egg-content > a {
+    font-weight: bold;
+    border-bottom: 3px solid yellow;
+}
+
+.glass-content > a {
+    border-bottom: 3px solid burlywood;
+}
+
+.berries {
+    background: url(./images/mobile/image-graphic-design.jpg);
+    height: 90vh;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+
+.berries-content,
+.orange-content {
+    position: absolute;
+    bottom: 50px;
+    color: #14473b;
+    margin: 0 auto;
+}
+
+.orange {
+    background: url(./images/mobile/image-photography.jpg);
+    height: 90vh;
+    background-position: center top;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+
+.orange-content {
+    color: #114053;
+}
+
+.testimonials {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.tests {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.employee-photo > img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.employee-photo {
+    margin-bottom: 1em;
+}
+
+.testimonials > h3 {
+    margin-bottom: 2em;
+    color: grey;
+}
+
+.employee-content > p {
+    margin-bottom: 1em;
+}
+
+.employee-content > h4 {
+    margin-bottom: .5em;
+}
+
+.emily, .thomas, .jennie {
+    margin-bottom: 3rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+footer {
+    background: #52f5d4;
+    text-align: center;
+    padding: 2.5em;
+}
+
+.navigation-bottom > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70vw;
+    margin: 2.5em auto;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50vw;
+    margin: 2em auto;
+}
+
+@media (min-width: 700px){
+    header {
+        background: url(./images/desktop/image-header.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .hamburger {
+        display: none;
+    }
+    .triangle {
+        display: none;
+    }
+
+    .navigation-bar {
+        transform: translateY(-35px);
+    }
+
+    ul.header {
+        flex-direction: row;
+        background: none;
+        margin: 0px auto;
+    }
+    .hero {
+        top: 100px;
+    }
+
+
+    .egg, .glass {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+    }
+
+    .berries {
+        background: url(./images/desktop/image-graphic-design.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .orange {
+        background: url(./images/desktop/image-photography.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .tests {
+        flex-direction: row;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
